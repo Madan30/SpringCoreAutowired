@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 
+	<bean id="heartObject" class="com.NepalCode.Autowire.Heart" />
+	<bean id="human" class="com.NepalCode.Autowire.Human">
+		<property name="numberofHeart" value="1" />
+		<property name="heart" ref="heartObject" />
+	</bean>
+	
+	 -->
+	 
+	 <!-- Autowired in spring: byName
+	  Heart class variable should be match with bean id of heartClass  -->
+	  
+	  <!-- Autowired in spring: byType: class name should be match if the bean id is different  -->
+	 
+	<bean id="heart" class="com.NepalCode.Autowire.Heart" />
+	
+	
+	
+	<bean id="heart" class="com.NepalCode.Autowire.Heart" />
+	
+	<bean id="human" class="com.NepalCode.Autowire.Human" autowire="byName">
+	</bean>
+	
+	 <!-- 
+	<bean id="heart" class="com.NepalCode.Autowire.Heart" />
+	<bean id="human" class="com.NepalCode.Autowire.Human" autowire="constructor">
+	
+	</bean>
+	 -->
+	
+
+</beans>
